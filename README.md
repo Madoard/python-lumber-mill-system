@@ -2,16 +2,16 @@
 
   <p>｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ──────────── ꒰ 🪵 ꒱ ──────────── ⋆｡ﾟ☾ ﾟ｡⋆｡☁︎｡ﾟ</p>
 
-  <h1>˚₊‧꒰ა 🌲 Python Lumber Mill System 🌲 ໒꒱‧₊˚</h1>
+  <h1>˚₊‧꒰ა 🌲 Sistema de Madeireira em Python 🌲 ໒꒱‧₊˚</h1>
 
   <p>
-    <i>✧･ﾟ: *✧･ﾟ:* Modular command-line Python application for lumber order management featuring wood catalog pricing, progressive volume discounts, and freight calculation *:･ﾟ✧*:･ﾟ✧</i>
+    <i>✧･ﾟ: *✧･ﾟ:* Aplicação modular em Python via linha de comando para gestão de pedidos de madeira com tabela de preços por tipo, descontos progressivos por volume e cálculo de frete *:･ﾟ✧*:･ﾟ✧</i>
   </p>
 
   <p>
     <img src="https://img.shields.io/badge/Python-3.x-FFB7C5?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-    <img src="https://img.shields.io/badge/Architecture-Modular%20Functions-E6E6FA?style=for-the-badge&logoColor=555555" alt="Modular Functions" />
-    <img src="https://img.shields.io/badge/Console-CLI%20System-FFD1DC?style=for-the-badge&logoColor=white" alt="CLI System" />
+    <img src="https://img.shields.io/badge/Arquitetura-Fun%C3%A7%C3%B5es%20Modulares-E6E6FA?style=for-the-badge&logoColor=555555" alt="Funções Modulares" />
+    <img src="https://img.shields.io/badge/Console-Sistema%20CLI-FFD1DC?style=for-the-badge&logoColor=white" alt="Sistema CLI" />
   </p>
 
 </div>
@@ -20,35 +20,35 @@
 
 <p align="center">‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾. ─────────────────────── ‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾.</p>
 
-### ╰┈➤ ꒰ 🍂 ꒱ Pricing & Business Rules
+### ╰┈➤ ꒰ 🍂 ꒱ Preços & Regras de Negócio
 
-#### Wood Catalog (`per log`)
-| 🌲 Code | 🪵 Wood Type | 🍃 Unit Price |
+#### Catálogo de Madeiras (`por tora`)
+| 🌲 Código | 🪵 Tipo de Madeira | 🍃 Preço Unitário |
 | :---: | :--- | :---: |
-| `PIN` | Pine *(Pinho)* | `$ 150.40` |
-| `PER` | Peroba | `$ 170.20` |
-| `MOG` | Mahogany *(Mogno)* | `$ 190.90` |
-| `IPE` | Ipe *(Ipê)* | `$ 210.10` |
-| `IMB` | Imbuia | `$ 220.70` |
+| `PIN` | Pinho *(Pine)* | `R$ 150,40` |
+| `PER` | Peroba | `R$ 170,20` |
+| `MOG` | Mogno *(Mahogany)* | `R$ 190,90` |
+| `IPE` | Ipê *(Ipe)* | `R$ 210,10` |
+| `IMB` | Imbuia | `R$ 220,70` |
 
-#### Volume Discounts & Freight Tiers
-* **₊˚🪓 Under `100` logs:** `0%` discount
-* **₊˚🪓 `100` to `499` logs:** `4%` discount
-* **₊˚🪓 `500` to `999` logs:** `9%` discount
-* **₊˚🪓 `1,000` to `2,000` logs:** `16%` discount *(orders exceeding `2,000` logs are rejected)*
-* **₊˚🚚 Freight Options:** Road (`$ 1,000.00`), Rail (`$ 2,000.00`), or Waterway (`$ 2,500.00`)
+#### Descontos por Volume & Faixas de Frete
+- **₊˚🪓 Abaixo de `100` toras:** `0%` de desconto
+- **₊˚🪓 De `100` a `499` toras:** `4%` de desconto
+- **₊˚🪓 De `500` a `999` toras:** `9%` de desconto
+- **₊˚🪓 De `1.000` a `2.000` toras:** `16%` de desconto *(pedidos acima de `2.000` toras são recusados)*
+- **₊˚🚚 Opções de Frete:** Rodoviário (`R$ 1.000,00`), Ferroviário (`R$ 2.000,00`) ou Hidroviário (`R$ 2.500,00`)
 
 <p align="center">‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾. ─────────────────────── ‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾.</p>
 
-### ╰┈➤ ꒰ 🍃 ꒱ How It Was Built
+### ╰┈➤ ꒰ 🍃 ꒱ Como Foi Construído
 
-* **₊˚🌲 Modular Design (`def`):** Separated wood selection, log quantity validation, and shipping mode calculation into dedicated functions with single and tuple return values.
-* **₊˚🪵 Exception & Bounds Handling:** Combined `while True` loops with `try / except ValueError` blocks to catch non-numeric inputs and enforce order quantity limits.
-* **₊˚🌲 Order Total Consolidation:** Applied arithmetic expressions integrating unit log costs, progressive discount tiers, and fixed freight fees.
+- **₊˚🌲 Design Modular (`def`):** Separação da escolha da madeira, validação da quantidade de toras e cálculo do modal de transporte em funções dedicadas com retornos simples e em tupla.
+- **₊˚🪵 Tratamento de Exceções e Limites:** Combinação de laços `while True` com blocos `try / except ValueError` para capturar entradas não numéricas e aplicar os limites de quantidade do pedido.
+- **₊˚🌲 Consolidação do Total do Pedido:** Aplicação de expressões aritméticas integrando custo unitário das toras, faixas progressivas de desconto e taxas fixas de frete.
 
 <br/>
 
 <div align="center">
   <p>°•. 🌲 .•° ────── ꒰ 💗 ꒱ ────── °•. 🌲 .•°</p>
-  <p><i>made with 💗 by <b>Maria Eduarda Gonçalves</b></i></p>
+  <p><i>feito com 💗 por <b>Maria Eduarda Gonçalves</b></i></p>
 </div>
