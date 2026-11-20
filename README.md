@@ -2,7 +2,7 @@
 
   <p>─────────────────────── ✦ ───────────────────────</p>
 
-  <h1>˚₊‧꒰ა Sistema de Madeireira em Python ໒꒱‧₊˚</h1>
+  <h1>꒰ა Sistema de Madeireira em Python ໒꒱</h1>
 
   <p>
     <i>Aplicação modular em Python via linha de comando para pedidos de madeira com descontos por volume e cálculo de frete.</i>
