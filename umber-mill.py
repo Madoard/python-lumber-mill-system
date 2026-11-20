@@ -1,85 +1,85 @@
-# Display welcome message and wood menu
-print("Welcome to Maria Eduarda Gonçalves's Lumber Mill!")
-print("Please enter the desired wood type:")
-print("PIN - Pine Log")
-print("PER - Peroba Log")
-print("MOG - Mahogany Log")
-print("IPE - Ipe Log")
-print("IMB - Imbuia Log")
+# Exibe a mensagem de boas-vindas e o menu de madeiras
+print("Bem-vindo à Madeireira de Maria Eduarda Gonçalves!")
+print("Por favor, informe o tipo de madeira desejado:")
+print("PIN - Tora de Pinho")
+print("PER - Tora de Peroba")
+print("MOG - Tora de Mogno")
+print("IPE - Tora de Ipê")
+print("IMB - Tora de Imbuia")
 
 
-# Function to choose the wood type and return its unit price
-def choose_wood_type():
+# Função para escolher o tipo de madeira e retornar o preço unitário
+def escolher_tipo_madeira():
     while True:
-        wood_type = input("\nEnter the desired wood type: ").strip().upper()
-        if wood_type == "PIN":
+        tipo_madeira = input("\nInforme o tipo de madeira desejado: ").strip().upper()
+        if tipo_madeira == "PIN":
             return 150.40
-        elif wood_type == "PER":
+        elif tipo_madeira == "PER":
             return 170.20
-        elif wood_type == "MOG":
+        elif tipo_madeira == "MOG":
             return 190.90
-        elif wood_type == "IPE":
+        elif tipo_madeira == "IPE":
             return 210.10
-        elif wood_type == "IMB":
+        elif tipo_madeira == "IMB":
             return 220.70
         else:
-            print("Invalid choice, please enter the wood type again.")
-            print("PIN - Pine Log")
-            print("PER - Peroba Log")
-            print("MOG - Mahogany Log")
-            print("IPE - Ipe Log")
-            print("IMB - Imbuia Log")
+            print("Escolha inválida, informe o tipo de madeira novamente.")
+            print("PIN - Tora de Pinho")
+            print("PER - Tora de Peroba")
+            print("MOG - Tora de Mogno")
+            print("IPE - Tora de Ipê")
+            print("IMB - Tora de Imbuia")
 
 
-# Function to get log quantity and return quantity + volume discount
-def log_quantity():
+# Função para obter a quantidade de toras e retornar a quantidade + desconto por volume
+def quantidade_toras():
     while True:
         try:
-            qty = int(input("\nEnter the number of logs: "))
-            if qty <= 0 or qty > 2000:
-                print("We do not accept orders with this number of logs. Please try again.")
+            qtd = int(input("\nInforme a quantidade de toras: "))
+            if qtd <= 0 or qtd > 2000:
+                print("Não aceitamos pedidos com essa quantidade de toras. Tente novamente.")
                 continue
-            elif qty < 100:
-                return qty, 0.0
-            elif 100 <= qty < 500:
-                return qty, 0.04
-            elif 500 <= qty < 1000:
-                return qty, 0.09
-            elif 1000 <= qty <= 2000:
-                return qty, 0.16
+            elif qtd < 100:
+                return qtd, 0.0
+            elif 100 <= qtd < 500:
+                return qtd, 0.04
+            elif 500 <= qtd < 1000:
+                return qtd, 0.09
+            elif 1000 <= qtd <= 2000:
+                return qtd, 0.16
         except ValueError:
-            print("Invalid order. Please enter a whole number for the quantity of logs.")
+            print("Pedido inválido. Informe um número inteiro para a quantidade de toras.")
 
 
-# Function to choose the shipping option and return its cost
-def shipping_option():
+# Função para escolher a opção de frete e retornar o seu custo
+def opcao_frete():
     while True:
         try:
-            option = int(input(
-                "\nChoose the shipping option:\n"
-                " 1 - Road Transport - $ 1000.00\n"
-                " 2 - Rail Transport - $ 2000.00\n"
-                " 3 - Waterway Transport - $ 2500.00\n"
-                "Option: "
+            opcao = int(input(
+                "\nEscolha a opção de frete:\n"
+                " 1 - Transporte Rodoviário - $ 1000.00\n"
+                " 2 - Transporte Ferroviário - $ 2000.00\n"
+                " 3 - Transporte Hidroviário - $ 2500.00\n"
+                "Opção: "
             ))
-            if option == 1:
+            if opcao == 1:
                 return 1000
-            elif option == 2:
+            elif opcao == 2:
                 return 2000
-            elif option == 3:
+            elif opcao == 3:
                 return 2500
             else:
-                print("Invalid option. Please choose 1, 2, or 3.")
+                print("Opção inválida. Escolha 1, 2 ou 3.")
         except ValueError:
-            print("Invalid input. Please enter a whole number.")
+            print("Entrada inválida. Informe um número inteiro.")
 
 
-# Execute functions and calculate the final order total
-unit_price = choose_wood_type()
-quantity, discount = log_quantity()
-shipping_cost = shipping_option()
+# Executa as funções e calcula o total final do pedido
+preco_unitario = escolher_tipo_madeira()
+quantidade, desconto = quantidade_toras()
+custo_frete = opcao_frete()
 
-total = ((unit_price * quantity) * (1 - discount)) + shipping_cost
+total = ((preco_unitario * quantidade) * (1 - desconto)) + custo_frete
 
-# Display final order total
+# Exibe o total final do pedido
 print(f"\nTotal: $ {total:.2f}")
