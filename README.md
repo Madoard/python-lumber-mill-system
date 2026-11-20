@@ -50,6 +50,7 @@ Permite registrar pedidos de madeira diretamente no terminal com seleção do ti
 - **Rodoviário:** `R$ 1.000,00`
 - **Ferroviário:** `R$ 2.000,00`
 - **Hidroviário:** `R$ 2.500,00`
+
 <p align="center">─────────────────────── · ───────────────────────</p>
 
 ### ✦ Como Executar
@@ -57,8 +58,8 @@ Permite registrar pedidos de madeira diretamente no terminal com seleção do ti
 1. **Pré-requisitos:** Tenha o **Python 3.x** instalado na máquina.
 2. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/Madoard/NOME-DO-REPOSITORIO.git](https://github.com/Madoard/NOME-DO-REPOSITORIO.git)
-   cd NOME-DO-REPOSITORIO
+   git clone https://github.com/Madoard/python-lumber-mill-system.git
+   cd python-lumber-mill-system
    ```
 3. **Execute o script (`madeireira.py`):**
    ```bash
@@ -81,13 +82,15 @@ Informe o tipo de madeira desejado: mog
 Informe a quantidade de toras: 200
 
 Escolha a opção de frete:
- 1 - Transporte Rodoviário - $ 1000.00
- 2 - Transporte Ferroviário - $ 2000.00
- 3 - Transporte Hidroviário - $ 2500.00
+ 1 - Transporte Rodoviário - R$ 1000.00
+ 2 - Transporte Ferroviário - R$ 2000.00
+ 3 - Transporte Hidroviário - R$ 2500.00
 Opção: 1
 
-Total: $ 37664.80
+Total: R$ 37652.80
 ```
+
+O cálculo do exemplo: `190,90 × 200 = 38.180,00`, menos 4% de desconto = `36.652,80`, mais `1.000,00` de frete = `37.652,80`.
 
 <p align="center">─────────────────────── · ───────────────────────</p>
 
@@ -142,9 +145,9 @@ def opcao_frete():
         try:
             opcao = int(input(
                 "\nEscolha a opção de frete:\n"
-                " 1 - Transporte Rodoviário - $ 1000.00\n"
-                " 2 - Transporte Ferroviário - $ 2000.00\n"
-                " 3 - Transporte Hidroviário - $ 2500.00\n"
+                " 1 - Transporte Rodoviário - R$ 1000.00\n"
+                " 2 - Transporte Ferroviário - R$ 2000.00\n"
+                " 3 - Transporte Hidroviário - R$ 2500.00\n"
                 "Opção: "
             ))
             if opcao == 1:
@@ -165,7 +168,7 @@ custo_frete = opcao_frete()
 
 total = ((preco_unitario * quantidade) * (1 - desconto)) + custo_frete
 
-print(f"\nTotal: $ {total:.2f}")
+print(f"\nTotal: R$ {total:.2f}")
 ```
 
 - **Funções modulares (`escolher_tipo_madeira`, `quantidade_toras`, `opcao_frete`):** Organizam cada etapa do pedido em funções próprias, com sanitização `.strip().upper()` na madeira e retorno em tupla `(qtd, desconto)` na quantidade.
